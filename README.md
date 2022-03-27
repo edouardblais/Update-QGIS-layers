@@ -1,7 +1,7 @@
 # Update-QGIS-layers
 Working as an exploration geologist, my team is constantly using government generated shapefiles to create appropriate maps and perform data analysis in QGIS. 
 
-These shapefiles are updated regularly and up until now, my colleagues had to manually download all the shapefiles essential to their work on from the provincial government's website, unzip them, and upload them to QGIS, taking some precious time every other working day.
+These shapefiles are updated regularly and up until now, my colleagues had to manually download all the shapefiles essential to their work from the provincial government's website, unzip them, and upload them to QGIS, taking some precious time every other working day.
 
 Knowing this task can be automated, I devised some python scripts which will do this job for us! 
 
