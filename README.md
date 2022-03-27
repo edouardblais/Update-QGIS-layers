@@ -6,3 +6,5 @@ These shapefiles are updated regularly and up until now, my colleagues had to ma
 Knowing this task can be automated, I devised some python scripts which will do this job for us! 
 
 One of them goes out to get one specific package of shapefiles which is mostly used, and the other one goes out to get all the packages. Simply choose your script, and run them in the python console of QGIS, and you are good to go!
+
+These scripts are geared specifically towards the needs of my work, but they could easily be adapted to any similar request.
