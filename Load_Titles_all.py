@@ -13,13 +13,7 @@ def get_filename(url):
 outdir = r"C:\Users\Edouard\Desktop\SIGEOM_shp"
 
 # Links to SIGEOM website to get the specific files
-url_list = ['https://gq.mines.gouv.qc.ca/documents/SIGEOM/TOUTQC/FRA/SHP/SIGEOM_QC_Geologie_du_socle_SHP.zip',
-            'https://gq.mines.gouv.qc.ca/documents/SIGEOM/TOUTQC/FRA/SHP/SIGEOM_QC_Activites_minieres_SHP.zip',
-            'https://gq.mines.gouv.qc.ca/documents/SIGEOM/TOUTQC/FRA/SHP/SIGEOM_QC_Geochimie_SHP.zip',
-            'https://gq.mines.gouv.qc.ca/documents/SIGEOM/TOUTQC/FRA/SHP/SIGEOM_QC_Geologie_du_Quaternaire_SHP.zip',
-            'https://gq.mines.gouv.qc.ca/documents/SIGEOM/TOUTQC/FRA/SHP/SIGEOM_QC_Geophysique_SHP.zip',
-            'https://gq.mines.gouv.qc.ca/documents/SIGEOM/TOUTQC/FRA/SHP/SIGEOM_QC_Indices_gites_mines_et_carrieres_SHP.zip'
-            'https://diffusion.mern.gouv.qc.ca/public/GESTIM/telechargements/Province_shape/TITRES_TITLES_ALL.zip'
+url_list = ['https://diffusion.mern.gouv.qc.ca/public/GESTIM/telechargements/Province_shape/TITRES_TITLES_ALL.zip'
             ]
 
 # Create folder for files if it does not exist
@@ -44,13 +38,10 @@ for url in url_list:
 
 # load SIGEOM shapefiles into QGIS
 filepath = "C:/Users/Edouard/Desktop/SIGEOM_shp"
-for dirpath, dirnames, filenames in os.walk(filepath):
-    for i in filenames:
-        if i[-3:] == 'shp':
-            subfilepath = os.path.join(dirpath, i)
-            vlayer = iface.addVectorLayer(subfilepath, '', 'ogr')
+for files in os.listdir(filepath):
+    if files.endswith('.shp'):
+        subfilepath = os.path.join(filepath, files)
+        vlayer = iface.addVectorLayer(subfilepath, '', 'ogr')
 
 print('You are good to go!')
-
-
 
